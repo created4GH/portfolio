@@ -1,0 +1,15 @@
+.top {
+    padding-top: 10px;
+    padding-left: 0;
+    border-bottom: 1px solid #ccc;
+
+    &::after{
+        content: "";
+        clear: left;
+        display: block;
+    }
+}
+
+@media (max-width: 1198.98px){
+
+}

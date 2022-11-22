@@ -1,0 +1,222 @@
+@mixin centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+$def-border: 1px solid #ccc;
+
+.slider {
+    height: clamp(250px, 27vw, 270px);
+    padding: 10px;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    width: 100%;
+    transition: 1s;
+    background-color: #fff;
+    border: $def-border;
+    border-radius: 10px;
+    font-family: "Brush Script MT", cursive;
+
+    & > p {
+        height: 20px;
+    }
+
+    & > *:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+/*-------------------------------*/
+.slider__title {
+    font-size: 1.2rem;
+}
+
+.slider__title-link {
+    &:hover {
+        text-decoration: underline;
+        color: rgb(80, 14, 14);
+    }
+}
+/*-------------------------------*/
+.slider__sliding-area {
+    position: relative;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+.slider__sliding-area--hovered-right,
+.slider__sliding-area--hovered-left {
+    cursor: pointer;
+}
+.slider__sliding-area--hovered-right {
+    .slide--right {
+        box-shadow: 0 0 0 30px rgba(163, 151, 151, 0.2);
+    }
+}
+.slider__sliding-area--hovered-left {
+    .slide--left {
+        box-shadow: 0 0 0 30px rgba(163, 151, 151, 0.2);
+    }
+}
+/*-------------------------------*/
+
+.slider__slides-container {
+    width: 100%;
+    height: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    top: 0;
+}
+/*-------------------------------*/
+
+.slider__slide {
+    height: 95%;
+    position: absolute;
+    flex-shrink: 0;
+    transition: transform 0.7s, scale 0.7s, box-shadow 0.3s;
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    }
+}
+
+.slide--selected {
+    scale: 1;
+    transform: translateX(0);
+
+    &:hover {
+        scale: 1.03;
+    }
+}
+
+.slide--right,
+.slide--left {
+    scale: 0.8;
+}
+.slide--right {
+    transform: translateX(150%);
+}
+.slide--left {
+    transform: translateX(-150%);
+}
+.slide--right-hidden,
+.slide--left-hidden {
+    scale: 0.4;
+}
+.slide--right-hidden {
+    transform: translateX(510%);
+}
+.slide--left-hidden {
+    transform: translateX(-510%);
+}
+/*-------------------------------*/
+.slider__btn {
+    $this-size: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 2;
+    height: $this-size;
+    width: $this-size;
+    background: #fff;
+    border: $def-border;
+    border-radius: 50%;
+
+    img{
+        transition: .2s;
+    }
+
+    &:hover{
+        background: rgba(205, 231, 188, 1);
+    }
+
+    &:disabled {
+        background-color: rgb(222, 234, 238);
+    }
+}
+.slider__btn-to-left {
+    left: 2%;
+    img {
+        rotate: 180deg;
+        margin-right: 4px;
+    }
+}
+.slider__btn-to-right {
+    right: 2%;
+    img {
+        margin-left: 4px;
+    }
+}
+/*-------------------------------*/
+.slider__dots-container {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+    .slider__dot {
+        display: inline-block;
+        height: 5px;
+        width: 5px;
+        border-radius: 50%;
+        background-color: lightblue;
+        transition: 0.2s;
+    }
+
+    .slider__dot--selected {
+        scale: 2;
+    }
+}
+/*-------------------------------*/
+
+@media (max-width: 599px) {
+    .slider__slide {
+        height: 70%;
+    }
+
+    .slider__btn {
+        top: auto;
+        transform: translateY(0);
+        bottom: 8px;
+    }
+    .slider__btn-to-left {
+        left: 30%;
+    }
+    .slider__btn-to-right {
+        right: 30%;
+    }
+    /*-------------------------------*/
+    .slider__dots-container {
+        bottom: 5px;
+    }
+}
+
+@media (max-width: 399px) {
+    .slider__slide {
+        height: 60%;
+    }
+    /*-------------------------------*/
+
+    .slider__btn {
+        bottom: 15px;
+    }
+    /*-------------------------------*/
+
+    .slider__tech-stack {
+        font-size: 0.85rem;
+    }
+}

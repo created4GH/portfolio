@@ -1,0 +1,9 @@
+.portfolio {
+    & > section:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.portfolio__title{
+    margin-bottom: 0;
+}
