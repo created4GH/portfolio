@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/my-website/static/css/main.446caefe.css",
+    "main.js": "/my-website/static/js/main.07cb1e16.js",
+    "static/media/me.jpg": "/my-website/static/media/me.e7fee7a988358dca5a8f.jpg",
+    "static/media/me-gusta.svg": "/my-website/static/media/me-gusta.27c08d93a771ec1f31983ac5df36f34d.svg",
+    "static/media/github.svg": "/my-website/static/media/github.da1919935c082b8cb4a1abdabe61d8d1.svg",
+    "static/media/download.svg": "/my-website/static/media/download.1022bcaca7bfe3aaf40c226445fa1a12.svg",
+    "static/media/mail.svg": "/my-website/static/media/mail.bec778e8ff43208e45b3d86b5618779e.svg",
+    "static/media/linkedin.svg": "/my-website/static/media/linkedin.6adc5c94af20556e39788b2e0360089f.svg",
+    "index.html": "/my-website/index.html",
+    "static/media/arrow.svg": "/my-website/static/media/arrow.df83b82a10ec3c9ff6184180b996ea03.svg",
+    "main.446caefe.css.map": "/my-website/static/css/main.446caefe.css.map",
+    "main.07cb1e16.js.map": "/my-website/static/js/main.07cb1e16.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.446caefe.css",
+    "static/js/main.07cb1e16.js"
+  ]
+}
