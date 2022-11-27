@@ -10,7 +10,7 @@ import users from '../assets/img/slides/pet-projects/users.jpg';
 import noteEditor from '../assets/img/slides/pet-projects/note-editor.jpg';
 
 const DEF_GH_PAGES_URL = 'https://created4github.github.io/';
-const DEF_GH_REP_URL = 'https://github.com/created4GitHub/';
+const DEF_GH_REP_URL = 'https://github.com/created4gh/';
 
 export const MarkupSlides: SlideInfoType[] = [
     {
