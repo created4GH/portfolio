@@ -159,16 +159,10 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
     return (
         <div className='slider'>
             <p className='slider__title'>
-                <a
-                    target='_blank'
-                    href={websiteUrl}
-                    className='slider__title-website-link'>
+                <a target='_blank' href={websiteUrl} className='slider__title-website-link'>
                     {title}
                 </a>
-                <a
-                    target='_blank'
-                    href={sourceCodeUrl}
-                    className='slider__title-source-code-link'>
+                <a target='_blank' href={sourceCodeUrl} className='slider__title-source-code-link'>
                     <img src={sourceCodeIcon} alt="source code icon" />
                 </a>
             </p>

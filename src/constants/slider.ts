@@ -15,28 +15,28 @@ const DEF_GH_REP_URL = 'https://github.com/created4GitHub/';
 export const MarkupSlides: SlideInfoType[] = [
     {
         title: 'Relvise',
-        techStack: ['HTML, SCSS'],
+        techStack: ['HTML, CSS'],
         imgPath: relvise,
         websiteUrl: DEF_GH_PAGES_URL + 'relvise',
         sourceCodeUrl: DEF_GH_REP_URL + 'relvise'
     },
     {
         title: 'Gocorna',
-        techStack: ['HTML', 'SCSS'],
+        techStack: ['HTML', 'CSS'],
         imgPath: gocorna,
         websiteUrl: DEF_GH_PAGES_URL + 'gocorna',
         sourceCodeUrl: DEF_GH_REP_URL + 'gocorna'
     },
     {
         title: 'Real-Estate',
-        techStack: ['HTML', 'SCSS', 'JS'],
+        techStack: ['HTML', 'CSS', 'JS'],
         imgPath: realEstate,
         websiteUrl: DEF_GH_PAGES_URL + 'real-estate',
         sourceCodeUrl: DEF_GH_REP_URL + 'real-estate'
     },
     {
         title: 'Rhythm',
-        techStack: ['HTML', 'SCSS', 'JS'],
+        techStack: ['HTML', 'CSS', 'JS'],
         imgPath: rhythm,
         websiteUrl: DEF_GH_PAGES_URL + 'rhythm',
         sourceCodeUrl: DEF_GH_REP_URL + 'rhythm'
