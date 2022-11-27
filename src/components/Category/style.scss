@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
 }
-
+/*-------------------------------*/
 .category {
     position: relative;
     padding: 10px;
@@ -17,11 +17,10 @@
     cursor: pointer;
     background-color: rgb(238, 232, 232);
 }
-
+/*-------------------------------*/
 .category__title {
     position: relative;
     @include centered;
-    margin-bottom: 0;
 
     &::before,
     &::after {
@@ -41,7 +40,7 @@
         right: 20px;
     }
 }
-
+/*-------------------------------*/
 .category__markup--closed,
 .category__pet-projects--closed {
     .slider {

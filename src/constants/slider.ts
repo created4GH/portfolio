@@ -1,33 +1,45 @@
 import { SlideInfoType } from "../interfaces/common";
 
-const MARKUP_IMG_PATH = './img/slides/markup/';
-const PET_PROJECTS_IMG_PATH = './img/slides/pet-projects/';
-const DEF_GH_URL = 'https://created4github.github.io/';
+import relvise from '../assets/img/slides/markup/relvise.jpg';
+import gocorna from '../assets/img/slides/markup/gocorna.jpg';
+import realEstate from '../assets/img/slides/markup/real-estate.jpg';
+import rhythm from '../assets/img/slides/markup/rhythm.jpg';
+import myWebsite from '../assets/img/slides/pet-projects/my-website.jpg';
+import taxiPark from '../assets/img/slides/pet-projects/taxi-park.jpg';
+import users from '../assets/img/slides/pet-projects/users.jpg';
+import noteEditor from '../assets/img/slides/pet-projects/note-editor.jpg';
+
+const DEF_GH_PAGES_URL = 'https://created4github.github.io/';
+const DEF_GH_REP_URL = 'https://github.com/created4GitHub/';
 
 export const MarkupSlides: SlideInfoType[] = [
     {
         title: 'Relvise',
         techStack: ['HTML, SCSS'],
-        imgPath: MARKUP_IMG_PATH + 'relvise.jpg',
-        url: DEF_GH_URL + 'relvise'
+        imgPath: relvise,
+        websiteUrl: DEF_GH_PAGES_URL + 'relvise',
+        sourceCodeUrl: DEF_GH_REP_URL + 'relvise'
     },
     {
         title: 'Gocorna',
         techStack: ['HTML', 'SCSS'],
-        imgPath: MARKUP_IMG_PATH + 'gocorna.jpg',
-        url: DEF_GH_URL + 'gocorna'
+        imgPath: gocorna,
+        websiteUrl: DEF_GH_PAGES_URL + 'gocorna',
+        sourceCodeUrl: DEF_GH_REP_URL + 'gocorna'
     },
     {
         title: 'Real-Estate',
         techStack: ['HTML', 'SCSS', 'JS'],
-        imgPath: MARKUP_IMG_PATH + 'real-estate.jpg',
-        url: DEF_GH_URL + 'real-estate'
+        imgPath: realEstate,
+        websiteUrl: DEF_GH_PAGES_URL + 'real-estate',
+        sourceCodeUrl: DEF_GH_REP_URL + 'real-estate'
     },
     {
         title: 'Rhythm',
         techStack: ['HTML', 'SCSS', 'JS'],
-        imgPath: MARKUP_IMG_PATH + 'rhythm.jpg',
-        url: DEF_GH_URL + 'rhythm'
+        imgPath: rhythm,
+        websiteUrl: DEF_GH_PAGES_URL + 'rhythm',
+        sourceCodeUrl: DEF_GH_REP_URL + 'rhythm'
     },
 ]
 
@@ -35,25 +47,29 @@ export const PetProjectsSlides: SlideInfoType[] = [
     {
         title: 'My Website',
         techStack: ['React, SCSS'],
-        imgPath: PET_PROJECTS_IMG_PATH + 'my-website.jpg',
-        url: DEF_GH_URL + 'my-website'
+        imgPath: myWebsite,
+        websiteUrl: DEF_GH_PAGES_URL + 'my-website',
+        sourceCodeUrl: DEF_GH_REP_URL + 'my-website'
     },
     {
         title: 'Taxi-park',
         techStack: ['React Redux', 'SCSS'],
-        imgPath: PET_PROJECTS_IMG_PATH + 'taxi-park.jpg',
-        url: DEF_GH_URL + 'taxi-park'
+        imgPath: taxiPark,
+        websiteUrl: DEF_GH_PAGES_URL + 'taxi-park',
+        sourceCodeUrl: DEF_GH_REP_URL + 'taxi-park'
     },
     {
         title: 'Users',
         techStack: ['React Redux-Saga', 'SCSS'],
-        imgPath: PET_PROJECTS_IMG_PATH + 'users.jpg',
-        url: DEF_GH_URL + 'users'
+        imgPath: users,
+        websiteUrl: DEF_GH_PAGES_URL + 'users',
+        sourceCodeUrl: DEF_GH_REP_URL + 'users'
     },
     {
         title: 'Note-Editor',
         techStack: ['MERN', 'SCSS'],
-        imgPath: PET_PROJECTS_IMG_PATH + 'note-editor.jpg',
-        url: DEF_GH_URL + 'note-editor'
+        imgPath: noteEditor,
+        websiteUrl: DEF_GH_PAGES_URL + 'note-editor',
+        sourceCodeUrl: DEF_GH_REP_URL + 'note-editor'
     },
 ]

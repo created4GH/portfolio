@@ -4,9 +4,9 @@
     align-items: center;
 }
 $def-border: 1px solid #ccc;
-
+/*-------------------------------*/
 .slider {
-    height: clamp(250px, 27vw, 270px);
+    height: clamp(255px, 40vw, 285px);
     padding: 10px;
     margin-top: 20px;
     display: flex;
@@ -22,20 +22,35 @@ $def-border: 1px solid #ccc;
     & > p {
         height: 20px;
     }
-
-    & > *:not(:last-child) {
-        margin-bottom: 10px;
-    }
 }
 /*-------------------------------*/
 .slider__title {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
+
+    a {
+        display: inline-block;
+    }
 }
 
-.slider__title-link {
+.slider__title-website-link {
     &:hover {
         text-decoration: underline;
         color: rgb(80, 14, 14);
+    }
+}
+
+.slider__title-source-code-link {
+    height: 100%;
+    margin-left: 10px;
+
+    img {
+        height: 100%;
+    }
+
+    &:hover {
+        img {
+            scale: 1.1;
+        }
     }
 }
 /*-------------------------------*/
@@ -43,6 +58,7 @@ $def-border: 1px solid #ccc;
     position: relative;
     flex-grow: 1;
     overflow: hidden;
+    margin-bottom: 10px;
 }
 
 .slider__sliding-area--hovered-right,
@@ -64,35 +80,32 @@ $def-border: 1px solid #ccc;
 .slider__slides-container {
     width: 100%;
     height: 90%;
+    padding-top: 15px;
     position: relative;
-    display: flex;
-    justify-content: center;
-    top: 0;
+    @include centered;
 }
 /*-------------------------------*/
 
 .slider__slide {
-    height: 95%;
+    $correlation: 550 / 300;
+    width: clamp(180px, 40vw, 330px);
+    height: calc(clamp(180px, 40vw, 330px) / $correlation);
     position: absolute;
     flex-shrink: 0;
-    transition: transform 0.7s, scale 0.7s, box-shadow 0.3s;
-
-    &:hover {
-        cursor: pointer;
-    }
+    transition: transform 0.7s, scale 0.7s, box-shadow 0.3s, background-color 0.3s;
 
     img {
         height: 100%;
+        width: 100%;
         object-fit: contain;
-        -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-        -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 0 0 5px 2px rgba(32, 32, 32, 0.5);
     }
 }
 
 .slide--selected {
     scale: 1;
     transform: translateX(0);
+    transition: transform 0.7s, scale 0.7s, box-shadow 0.3s, background-color 0.3s;
 
     &:hover {
         scale: 1.03;
@@ -111,13 +124,14 @@ $def-border: 1px solid #ccc;
 }
 .slide--right-hidden,
 .slide--left-hidden {
+    transition: 1.2s;
     scale: 0.4;
 }
 .slide--right-hidden {
-    transform: translateX(510%);
+    transform: translateX(470%);
 }
 .slide--left-hidden {
-    transform: translateX(-510%);
+    transform: translateX(-470%);
 }
 /*-------------------------------*/
 .slider__btn {
@@ -131,30 +145,32 @@ $def-border: 1px solid #ccc;
     background: #fff;
     border: $def-border;
     border-radius: 50%;
+    @include centered;
 
-    img{
-        transition: .2s;
+    img {
+        transition: 0.2s;
     }
 
-    &:hover{
+    &:hover:not(:disabled) {
         background: rgba(205, 231, 188, 1);
     }
 
     &:disabled {
-        background-color: rgb(222, 234, 238);
+        opacity: 0.5;
+        cursor: not-allowed;
     }
 }
 .slider__btn-to-left {
     left: 2%;
     img {
         rotate: 180deg;
-        margin-right: 4px;
+        margin-right: 2px;
     }
 }
 .slider__btn-to-right {
     right: 2%;
     img {
-        margin-left: 4px;
+        margin-left: 2px;
     }
 }
 /*-------------------------------*/
@@ -180,38 +196,29 @@ $def-border: 1px solid #ccc;
         scale: 2;
     }
 }
-/*-------------------------------*/
+/*===================================*/
 
 @media (max-width: 599px) {
-    .slider__slide {
-        height: 70%;
+    .slider__dots-container {
+        bottom: 5px;
     }
-
+}
+/*===================================*/
+@media (max-width: 399px) {
+    .slider__slides-container {
+        align-items: baseline;
+    }
+    /*-------------------------------*/
     .slider__btn {
         top: auto;
         transform: translateY(0);
-        bottom: 8px;
+        bottom: 10px;
     }
     .slider__btn-to-left {
         left: 30%;
     }
     .slider__btn-to-right {
         right: 30%;
-    }
-    /*-------------------------------*/
-    .slider__dots-container {
-        bottom: 5px;
-    }
-}
-
-@media (max-width: 399px) {
-    .slider__slide {
-        height: 60%;
-    }
-    /*-------------------------------*/
-
-    .slider__btn {
-        bottom: 15px;
     }
     /*-------------------------------*/
 

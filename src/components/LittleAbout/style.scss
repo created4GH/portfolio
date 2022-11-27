@@ -11,13 +11,17 @@
         text-align: left;
     }
 }
-
+/*-------------------------------*/
+.little-about__title{
+    margin-bottom: 10px;
+}
+/*-------------------------------*/
 .little-about-article {
     & > p:not(:last-child) {
         margin-bottom: 0.4rem;
     }
 }
-
+/*-------------------------------*/
 .little-about-subtitle {
     font-size: 1.2rem;
     text-align: left;
