@@ -48,8 +48,8 @@ export const PetProjectsSlides: SlideInfoType[] = [
         title: 'My Website',
         techStack: ['React, SCSS'],
         imgPath: myWebsite,
-        websiteUrl: DEF_GH_PAGES_URL + 'my-website',
-        sourceCodeUrl: DEF_GH_REP_URL + 'my-website'
+        websiteUrl: DEF_GH_PAGES_URL + 'portfolio',
+        sourceCodeUrl: DEF_GH_REP_URL + 'portfolio'
     },
     {
         title: 'Taxi-park',
