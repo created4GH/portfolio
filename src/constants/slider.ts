@@ -9,7 +9,7 @@ import taxiPark from '../assets/img/slides/pet-projects/taxi-park.jpg';
 import users from '../assets/img/slides/pet-projects/users.jpg';
 import noteEditor from '../assets/img/slides/pet-projects/note-editor.jpg';
 
-const DEF_GH_PAGES_URL = 'https://created4github.github.io/';
+const DEF_GH_PAGES_URL = 'https://created4gh.github.io/';
 const DEF_GH_REP_URL = 'https://github.com/created4gh/';
 
 export const MarkupSlides: SlideInfoType[] = [
