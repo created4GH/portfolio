@@ -29,7 +29,7 @@ export const MarkupSlides: SlideInfoType[] = [
     },
     {
         title: 'Real-Estate',
-        techStack: ['HTML', 'CSS', 'JS'],
+        techStack: ['HTML', 'SCSS', 'JS'],
         imgPath: realEstate,
         websiteUrl: DEF_GH_PAGES_URL + 'real-estate',
         sourceCodeUrl: DEF_GH_REP_URL + 'real-estate'

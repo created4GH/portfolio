@@ -69,7 +69,7 @@ const Summary = () => {
                 <ul className="summary__links">
                     <li className="summary__links-item">
                         <a
-                            href='https://github.com/created4GitHub'
+                            href='https://github.com/created4gh'
                             target='_blank'
                             rel='noreferrer'
                             className="summary__link">
