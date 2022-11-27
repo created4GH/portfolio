@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { MarkupSlides, PetProjectsSlides } from '../../constants/slider';
+
 import Slider from '../Slider';
+
+import { MarkupSlides, PetProjectsSlides } from '../../constants/slider';
 
 import './style.scss';
 

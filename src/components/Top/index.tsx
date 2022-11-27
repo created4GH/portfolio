@@ -1,8 +1,7 @@
-import React from 'react';
-
-import './style.scss';
 import ShortInfo from '../Summary';
 import LittleAbout from '../LittleAbout';
+
+import './style.scss';
 
 const Top = () => {
     return (
