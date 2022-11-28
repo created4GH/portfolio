@@ -95,7 +95,7 @@ const Summary = () => {
                     </li>
                 </ul>
                 <a
-                    href='Vladyslav_Koretskyi_JS_Dev.pdf'
+                    href='JS_Dev_Vladyslav_Koretskyi_Resume.pdf'
                     download
                     className="summary__resume">
                     Resume <img src={download} alt="Download icon" />
