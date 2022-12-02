@@ -40,7 +40,7 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
     const slideToLeft = () => setSelectedSlideIndex(selectedSlideIndex - 1);
     const slideToRight = () => setSelectedSlideIndex(selectedSlideIndex + 1);
     const checkIsInAllowedBorders = (event: MyMouseEvent) => {
-        let margin = 20;
+        let margin = 30;
         const { clientX } = event;
         const selectedSlideRect = selectedSlide.current!.getBoundingClientRect();
         const selectedSlideWidth = selectedSlideRect.width;
@@ -69,7 +69,7 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
             callback();
             const timerId = setTimeout(() => {
                 setTimerId(null);
-            }, 200);
+            }, 150);
             setTimerId(timerId);
         }
     }
@@ -103,6 +103,11 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
             prevIsSlideToRightDisabled: isSlideToRightDisabled
         });
     };
+    const handleSliderDotClick = (event: React.MouseEvent<HTMLSpanElement>) => {
+        const target = event.target as HTMLSpanElement;
+        const index = +(target.dataset.index!);
+        setSelectedSlideIndex(index);
+    }
 
     const slides = useMemo(() => {
         return slidesInfo.map((item, index) => {
@@ -132,8 +137,15 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
             let className = 'slider__dot';
             const odds = selectedSlideIndex - index;
             if (!odds) className += ' slider__dot--selected';
-            return <span key={item.title} className={className}></span>
-        })
+            return (
+                <span
+                    key={item.title}
+                    data-index={index}
+                    className={className}
+                    onClick={handleSliderDotClick}>
+                </span>
+            )
+        });
     }, [selectedSlideIndex]);
 
     useEffect(() => {
@@ -173,7 +185,8 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
                 onMouseLeave={handleSlidingAreaMouseLeave}>
                 <div className={"slider__slides-container "} >
                     {slides}
-                    <button
+                </div>
+                <button
                         className='slider__btn slider__btn-to-left'
                         onClick={handleLeftBtnClick}
                         onMouseEnter={handleMouseEnterButton}
@@ -189,7 +202,6 @@ const Slider: React.FC<Props> = ({ slidesInfo }) => {
                         disabled={isSlideToRightDisabled}>
                         <img src={arrowIcon} />
                     </button>
-                </div>
                 <div className="slider__dots-container">
                     {sliderDots}
                 </div>

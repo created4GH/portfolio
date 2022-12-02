@@ -59,12 +59,7 @@ const Category: React.FC<Props> = ({ title, categoryClassName }) => {
     useEffect(() => {
         if (isCategoryOpened && catergoryRef.current) {
             const timerId = setTimeout(() => {
-                const { y, height } = catergoryRef.current!.getBoundingClientRect();
-                window.scroll({
-                    top: y + height,
-                    left: 0,
-                    behavior: 'smooth'
-                });
+                catergoryRef.current!.scrollIntoView({ behavior: 'smooth' });
             }, 1100);
             setTimerId(timerId);
         }
